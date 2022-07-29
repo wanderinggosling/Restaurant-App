@@ -1,0 +1,95 @@
+.offer{
+    margin: 0 -5px;
+}
+
+
+.offer::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.offer-heading{
+    display: block;
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 5%;
+}
+.offer-card-column{
+    float: left;
+    /* margin-left: 2vh; */
+    padding: 0 10px;
+    margin-bottom: 2vh;
+}
+.offer-cards{
+    float: left;
+    /* margin-left: 2vh; */
+    padding: 0 10px;
+    margin-bottom: 2vh;
+    /* border: solid 3px rgb(225, 65, 65); */
+    background-color: rgb(69 73 58);
+    height:50vh;
+    width: 25%;
+    border-radius:1rem;
+   
+}
+
+.offer-cards:hover{
+    background-color: rgb(160, 170, 150);
+    border: none;
+}
+
+.offer-item-image img{
+    border-radius: 8em;
+    border: solid 2px gold;
+    object-fit: cover;
+    height: auto;
+    width: 20vh;
+    margin-left: 10%;
+}
+.offer-item-image img:hover{
+    border: solid 2px green;
+}
+.offer-item-addtocart button{
+    background-color: #3eb042; /* Green */
+    border: none;
+  
+    width: 100%;
+    color: rgb(177, 35, 35);
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 10%;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 2em;;
+    font-size: 20px;
+}
+
+.offer-item-price{
+    font-size: 15px;
+    text-align: center;
+    color: darkgoldenrod;
+    text-decoration: line-through;
+}
+
+.offer-item-discountprice{
+    font-size: 15px;
+    text-align: center;
+    color: gold;
+}
+
+.offer-item-addtocart button:hover{
+    background-color: gold;
+    cursor: pointer;
+    color: black;
+}
+
+
+.offer-cards h1{
+    color: rgb(195, 50, 50);
+    margin-left: 20%;
+    font-size: 20px;
+}
+.offer-heading h1{
+    
+    color:rgb(172, 80, 80);
+}

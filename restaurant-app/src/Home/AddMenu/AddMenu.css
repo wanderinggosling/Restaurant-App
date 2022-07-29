@@ -1,0 +1,37 @@
+.add-items{
+    background-color: azure;
+    height:100vh;
+}
+
+.items{
+    display:block;
+    height: 50vh;
+}
+
+.items label{
+    display: flex;
+    font-family: sans-serif; 
+}
+
+/* .items textarea:hover{
+    border: solid 2px blue;
+    display: block;
+    border-radius: 2rem;
+    height: 20vh;
+    width: 30vh;
+} */
+
+.items input{
+    border: solid 2px blue;
+    display: block;
+    border-radius: 2rem;
+}
+
+.items button{
+    color: green;
+    background-color: aqua;
+    cursor: pointer;
+    margin-top: 10%;
+    width:20vh;
+    height: 5vh;
+}
