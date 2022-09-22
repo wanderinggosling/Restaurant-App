@@ -1,7 +1,7 @@
 import React from 'react';
 import './HomeLayout.css';
-import OfferLayout from '../OfferLayout/OfferLayout';
-
+// import OfferLayout from '../OfferLayout/OfferLayout';
+// import Card from '../CardProfile/CardProfile'
 
 const HomeLayout = () => {
   return (
@@ -22,6 +22,7 @@ const HomeLayout = () => {
             </div>
         </div>
       </div>
+
      
     </div>
 

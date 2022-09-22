@@ -1,0 +1,181 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+    .modal-main {
+      position: fixed;
+      background: white;
+      width: 41%;
+      height: 77vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    button{
+      background-color:rgb(9, 108, 183);
+      cursor: pointer;
+    
+    }
+  
+  
+  .display-block {
+    display: block;
+  }
+  
+  .display-none {
+    display: none;
+  }
+
+  ._modal-close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0.5em;
+    line-height: 1;
+    background: #f6f6f7;
+    border: 0;
+    box-shadow: 0;
+    cursor: pointer;
+  }
+  
+  ._modal-close-icon {
+    width: 25px;
+    float: right;
+    height: 25px;
+    fill: transparent;
+    stroke: black;
+    stroke-linecap: round;
+    stroke-width: 2;
+  }
+
+  .form-container{
+    background: antiquewhite;
+    width:40%;
+    margin:auto;
+}
+
+.form-rows{
+    width:100%;
+  display:block;
+}
+
+.form-columns{
+    width:100%;
+    display:inline-block;
+}
+
+form{
+    background-color: #dfdfdf;
+    width:100%;
+    height:90%;
+}
+
+.form-group h1{
+
+  color:black
+}
+
+.form-group label{
+    margin: 4%;
+    margin-left: 3%;
+    width:30%;
+    float:left;
+    color:black
+}
+
+.form-img{
+    margin: 4%;
+    border-radius: 2em;
+    margin-left: 3%;
+    width:30%;
+ 
+    float:left
+}
+
+.form-img img{
+    border-radius: 8em 8em;
+    width:100%;
+    height: 100%;
+}
+
+.form-group input{
+    width: 70%;
+    /* float: right; */
+    border: none;
+    margin-bottom: 0%;
+    margin-left: 4%;
+    height: 4vh;
+}
+
+.form-group button{
+    cursor: pointer;
+    margin-top: 5%;
+    height: 5vh;
+    margin-bottom: 5%;
+    margin-left: 15%;
+    background-color: rgb(99, 99, 239);
+    width: 35%;
+}
+.add-items{
+    background-color: azure;
+    height:100vh;
+}
+
+.items{
+    display:block;
+    height: 50vh;
+}
+
+.items label{
+    display: flex;
+    font-family: sans-serif; 
+}
+
+/* .items textarea:hover{
+    border: solid 2px blue;
+    display: block;
+    border-radius: 2rem;
+    height: 20vh;
+    width: 30vh;
+} */
+
+.items input{
+    border: solid 2px blue;
+    display: block;
+  
+}
+
+.items button{
+    color: green;
+    background-color: aqua;
+    cursor: pointer;
+    margin-top: 10%;
+    width:20vh;
+    height: 5vh;
+}
+
+select{
+    width:70%;
+    height: 4vh;
+    border: none;
+    margin-left: 4%;
+}
+
+
+@media screen and (max-width:650px){
+        .form-container{
+            width:92%;
+        }
+
+        .modal-main{
+          width: 80%;
+          margin-left: -8%;
+        }
+
+  }
+  

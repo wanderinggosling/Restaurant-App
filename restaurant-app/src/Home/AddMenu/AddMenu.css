@@ -1,3 +1,64 @@
+.form-container{
+    background: antiquewhite;
+    width:40%;
+    margin:auto;
+}
+
+.form-rows{
+    width:100%;
+  display:block;
+}
+
+.form-columns{
+    width:100%;
+    display:inline-block;
+}
+
+form{
+    background-color: #de2b2b;
+    width:100%;
+}
+
+.form-labels{
+    margin: 4%;
+    margin-left: 3%;
+    width:30%;
+    float:left
+}
+
+.form-img{
+    margin: 4%;
+    border-radius: 2em;
+    margin-left: 3%;
+    width:30%;
+ 
+    float:left
+}
+
+.form-img img{
+    border-radius: 8em 8em;
+    width:100%;
+    height: 100%;
+}
+
+.form-inputs{
+    width: 70%;
+    /* float: right; */
+    border: none;
+    margin-bottom: 0%;
+    margin-left: 4%;
+    height: 4vh;
+}
+
+.form-submit{
+    cursor: pointer;
+    margin-top: 5%;
+    height: 5vh;
+    margin-bottom: 5%;
+    margin-left: 4%;
+    background-color: rgb(99, 99, 239);
+    width: 71%;
+}
 .add-items{
     background-color: azure;
     height:100vh;
@@ -24,7 +85,7 @@
 .items input{
     border: solid 2px blue;
     display: block;
-    border-radius: 2rem;
+  
 }
 
 .items button{
@@ -35,3 +96,18 @@
     width:20vh;
     height: 5vh;
 }
+
+select{
+    width:70%;
+    height: 4vh;
+    border: none;
+    margin-left: 4%;
+}
+
+
+@media screen and (max-width:650px){
+        .form-container{
+            width:92%;
+        }
+
+  }

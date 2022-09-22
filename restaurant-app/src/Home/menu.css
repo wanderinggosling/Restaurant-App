@@ -1,3 +1,49 @@
+.menu-filter{
+    display: inline-flex;
+    margin-left: 20vh;
+   
+  }
+  .menu-filter-links {
+      
+      display:flex;
+      list-style-type: none;
+    
+      padding: 0;
+    
+      background-color:rgb(216, 31, 31);
+    }
+    
+    .menu-filter-links li {
+      margin:0 1rem;
+      cursor:pointer;
+    }
+  
+    .menu-filter-links li:hover{
+      color:rgb(136, 78, 78)
+    }
+  
+    
+    .menu-filter-links li a {
+      display: inline-block;
+      vertical-align: top;
+      font-family: sans-serif;
+      color: rgb(255, 249, 249);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+     .menu-filter-linksli a.active{
+      background-color: rgb(227, 15, 57);
+      border-radius: 2rem ;
+      color: black;
+    } 
+    .menu-filter-links li a:hover {
+      border-radius: 2rem;
+      background-color:rgb(231, 222, 224);
+      color: white;
+      transition: 0.5s ease;
+    }
 .add-menu{
     height: 10vh;
 }
@@ -19,4 +65,12 @@
    color: black;
    border: solid 2px black;
    
+}
+
+.empty-menu{
+    color: aliceblue;
+}
+
+.deleteMenuItem button{
+    cursor: pointer;
 }

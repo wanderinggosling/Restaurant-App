@@ -1,20 +1,22 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import {  NavLink } from 'react-router-dom';
 import './home.css'
 import Content from './content';
 import Menu from './menu'
 import './menu'
 import Footer from './footer'
-import Home from './home'
-import { AiOutlineSearch } from 'react-icons/ai'
+// import Home from './home'
+// import { AiOutlineSearch } from 'react-icons/ai'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { MdOutlineRestaurantMenu } from 'react-icons/md'
-import {BrowserRouter,Route,Routes} from 'react-router-dom';
+import {Route,Routes} from 'react-router-dom';
 import HomeLayout from './HomeLayout/HomeLayout';
 import OfferLayout from './OfferLayout/OfferLayout';
-import AddMenu from './AddMenu/AddMenu';
-import CN from '../index.css';
-import {motion} from "framer-motion/dist/framer-motion";
+import Addmenu1 from './AddMenu/Addmenu1';
+import EditMenu  from './EditMenu/Editmodal';
+// import CN from '../index.css';
+// import {motion} from "framer-motion/dist/framer-motion";
+import Card from './CardProfile/CardProfile'
 
 
 const home = () => {
@@ -37,7 +39,13 @@ const home = () => {
                 <li ><NavLink to='/Contact'>Contact
                 </NavLink> 
                 </li>
-                <li ><NavLink to='/AddMenu'>AddMenu
+                <li ><NavLink to='/Addmenu1'>AddMenu
+                </NavLink> 
+                </li>
+                <li ><NavLink to='/EditMenu'>Edit
+                </NavLink> 
+                </li>
+                <li ><NavLink to='/profile'>Profile
                 </NavLink> 
                 </li>
                 { /*<div className="searchbar">
@@ -62,7 +70,7 @@ const home = () => {
                              <li ><NavLink  to='/Offers' onClick={() => {setTimeout(()=>setToggleMenu(false),600);}}>Offers</NavLink> </li>
                             <li ><NavLink to='/Menu'  onClick={() => {setTimeout(()=>setToggleMenu(false),600);}}>Menu</NavLink> </li>
                             <li ><NavLink  to='/Contact' onClick={() => {setTimeout(()=>setToggleMenu(false),600);}}>Contact</NavLink> </li>
-                            <li ><NavLink  to='/AddMenu' onClick={() => {setTimeout(()=>setToggleMenu(false),600);}}>AddMenu</NavLink> </li>
+                            <li ><NavLink  to='/Addmenu1' onClick={() => {setTimeout(()=>setToggleMenu(false),600);}}>AddMenu</NavLink> </li>
                             
                         </ul>
                     </div>
@@ -79,7 +87,13 @@ const home = () => {
         <Route path="/Menu" element={<Menu />}/> 
         <Route path="/Offers" element={<OfferLayout/>}/> 
         <Route path="/Contact" element={<Footer/>}/> 
-        <Route path="/AddMenu" element={<AddMenu/>}/> 
+        <Route path="/profile" element={<Card/>}/> 
+        <Route path="/Addmenu1" element={<Addmenu1/>}/> 
+        <Route path="/EditMenu" element={<EditMenu/>}/> 
+        <Route path="/E" element={<EditMenu/>}/> 
+
+
+
       </Routes>
         </nav>
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import './content.css'
-
+import {RiDeleteBin2Line}from 'react-icons/ri'
 const content = () => {
     return (
         <div className="content">
@@ -13,16 +13,24 @@ const content = () => {
                             <h3 className="menu-item-heading">
                                 <span className="menu-item-name">Noodles</span>
                                 <span className="menu-item-cost">$12</span>
+                                <div className="actions">
+                                <RiDeleteBin2Line color="white" cursor="pointer" size={27} />
+                                        <button >Edit</button>
+                                        {/* <Container cursor="pointer" text={triggerText} currentmenu={m} onClick={()=>{console.log("there");getMenIn(m._id)}} onSubmit={onSubmit}>Edit</Container> */}
+                                        <button >Edit</button> 
+                                </div>
                             </h3>
+                            
                             <div className="menu-item-description">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis rerum unde ipsam, tempore vel accusantium enim iure! Vero quo corporis esse odit ipsa voluptatem quis aliquam totam, dicta illo voluptate.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, incidunt sint repellat voluptatum cumque accusamus consectetur ipsa in quod tempora ullam reiciendis laudantium veritatis officiis corrupti saepe? Dolores, nam corrupti!
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa omnis reiciendis maiores quo dicta quis alias sit. Quia saepe deleniti quas, minus ullam temporibus optio modi fuga, ipsum ut doloremque?
+                                   
                                 </p>
                             </div>
-
+                         
                         </div>
+                       
+                                          
                     </div>
                     <div className="menu-item">
                         <img className="menu-item-image" src={require("../images/vnoodles.jpg")} alt="" />
