@@ -36,7 +36,7 @@ const SoupCategory = () => {
                                     <div className="menu-item-text">
                                         <h3 className="menu-item-heading">
                                             <span className="menu-item-name">{ms.name}</span>
-                                            <span className="menu-item-cost">{ms.price}</span>
+                                            <span className="menu-item-cost">Rs {ms.price}</span>
                                             <RiDeleteBin2Line color="white" cursor="pointer" size={27} onClick={() => { deleteMenu(ms._id) }} />
                                         </h3>
                                         <div className="menu-item-description">

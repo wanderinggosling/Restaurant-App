@@ -1,5 +1,6 @@
 import React from 'react';
 import './HomeLayout.css';
+import { NavLink } from 'react-router-dom';
 // import OfferLayout from '../OfferLayout/OfferLayout';
 // import Card from '../CardProfile/CardProfile'
 
@@ -18,7 +19,7 @@ const HomeLayout = () => {
               <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia molestiae pariatur incidunt debitis dicta beatae, quidem iusto at molestias error dignissimos autem fuga quae magni dolorum nemo. Reiciendis, id repudiandae.</h5>
             </div>
             <div className="homelayout-left-button">
-              <button>Explore Now</button>
+             <NavLink to="/Offers"> <button>Explore Now</button></NavLink>
             </div>
         </div>
       </div>

@@ -1,4 +1,7 @@
 .form-container{
+    position: fixed;
+    top: 0;
+    left: 29vh;
     background: antiquewhite;
     width:40%;
     margin:auto;
@@ -107,7 +110,10 @@ select{
 
 @media screen and (max-width:650px){
         .form-container{
-            width:92%;
+            position: fixed;
+            top: 4;
+            left:0;
+            width:100%;
         }
 
   }

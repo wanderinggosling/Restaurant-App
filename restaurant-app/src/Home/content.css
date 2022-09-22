@@ -62,6 +62,10 @@
   .menu-item-cost{
     padding-right:5%;
   }
+
+  .menu-item-heading button{
+    background-color: whitesmoke;
+  }
   
   @media screen and (min-width: 992px) {
     .menu {

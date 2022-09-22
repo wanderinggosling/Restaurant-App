@@ -1,16 +1,16 @@
-.offer{
+.menulayout{
     display: inline-block;
     margin-right: 4%;
     margin-left: 6%;
 }
 
 
-.offer::after{
+.menulayout::after{
     content: "";
     display: table;
     clear: both;
 }
-.offer-heading{
+.menulayout-heading{
     font-family: auto;
     display: block;
     align-items: center;
@@ -19,57 +19,59 @@
     margin-bottom: 3%;
     /* border:solid 2px red; */
 }
-.offer-card-column{
+.menulayout-card-column{
     float: left;
     /* margin-left: 2vh; */
     padding: 0 20px;
     margin-bottom: 2vh;
 }
-.offer-cards{
+.menulayout-cards{
     float: left;
     /* margin-left: 2vh; */
     padding: 0 10px;
     margin-bottom: 2vh;
     /* border: solid 3px rgb(225, 65, 65); */
-    background-color: rgb(241, 254, 205);
+    background:none;
     height:100%;
     width: 100%;
     /* border-radius:1rem; */
    
 }
 
-.offer-cards:hover{
+.menulayout-cards:hover{
     /* background-color: rgb(160, 170, 150); */
     border: none;
 }
 
-.offer-item-image{
-    margin-left: 11%;
-    margin-right: 1%;
+.menulayout-item-image{
+    display: flex;
+    /* margin-left: 11%; */
+    /* margin-right: 1%; */
     width: 98%;
     height: 21vh;
+    justify-content: center;
 }
 
-.offer-item-image img{
+.menulayout-item-image img{
     /* border-radius: 8em; */
     border: solid 2px gold;
     object-fit: cover;
     height: 20vh;
-    width: 73%;
+    width: 76%;
     border-radius: 8rem 8rem;
    
 }
-.offer-item-image img:hover{
+.menulayout-item-image img:hover{
     border: solid 2px green;
 }
 
-.offer-item-addtocart{
+.menulayout-item-addtocart{
     /* display: contents; */
     margin-left: -3%;
     margin-right: -3%;
 }
 
-.offer-item-addtocart button{
+.menulayout-item-addtocart button{
     background-color: #3eb042; /* Green */
     border: solid 1px red;
   
@@ -84,32 +86,37 @@
     font-size: 20px;
 }
 
-.offer-item-price{
-    font-size: 15px;
-    text-align: center;
-    color: darkgoldenrod;
-    text-decoration: line-through;
+.menulayout-card-heading{
+    font: red;
 }
 
-.offer-item-discountprice{
+
+.menulayout-item-price{
     font-size: 15px;
     text-align: center;
+    font-family:'Times New Roman', Times, serif;
+
     color: gold;
 }
 
-.offer-item-addtocart button:hover{
+.menulayout-item-addtocart button:hover{
     background-color: gold;
     cursor: pointer;
     color: black;
 }
 
 
-.offer-cards h1{
+.menulayout-cards h1{
+    display: flex;
     color: rgb(195, 50, 50);
-    margin-left: 20%;
-    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+    /* margin-left: 20%; */
+    /* font-size: 20px; */
+    justify-content: center;
+    align-items: center;
 }
-.offer-heading h1{
+
+.menulayout-heading h1{
     
     color:rgb(255 242 33);
 }

@@ -6,9 +6,9 @@ import NoodleCategory from '../Category/NoodleCategory';
 import SoupCategory from '../Category/SoupCategory';
 import { useParams } from "react-router-dom";
 
-const EModal = ({ handleClose, show, children }) => {
+const EModal = ({ handleClose, show, children ,id}) => {
     const context=useContext(menuContext);
-    const {getMenIn,menIn,setmenIn,updatedMenu}=context;
+    const {getMenIn,menIn,setmenIn,updatedMenu,updateMenuNoodles}=context;
   
   
     const showHideClassName = show ? "modal display-block" : "modal display-none";
@@ -25,14 +25,16 @@ const EModal = ({ handleClose, show, children }) => {
 //       ref.current.click();
 //       setmen({id: currentMenu._id, name: currentMenu.name,price:currentMenu.price,category:currentMenu.category, description: currentMenu.description})
 //   }
-    const{id}=useParams
+    // const{id}=useParams
    
   const onChange = (e) => {
       setmenIn({ ...menIn, [e.target.name]: [e.target.value] });
   }
   const handleSubmit=(e)=>{
-    updatedMenu(menIn._id,menIn.name,menIn.price,menIn.category,menIn.description);
     e.preventDefault();
+  
+    updatedMenu(menIn._id,menIn.name.toString(),Number(menIn.price),menIn.category.toString(),menIn.description.toString());
+  
 }
   return (
     <>

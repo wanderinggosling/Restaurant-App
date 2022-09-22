@@ -13,12 +13,7 @@ const content = () => {
                             <h3 className="menu-item-heading">
                                 <span className="menu-item-name">Noodles</span>
                                 <span className="menu-item-cost">$12</span>
-                                <div className="actions">
-                                <RiDeleteBin2Line color="white" cursor="pointer" size={27} />
-                                        <button >Edit</button>
-                                        {/* <Container cursor="pointer" text={triggerText} currentmenu={m} onClick={()=>{console.log("there");getMenIn(m._id)}} onSubmit={onSubmit}>Edit</Container> */}
-                                        <button >Edit</button> 
-                                </div>
+                            
                             </h3>
                             
                             <div className="menu-item-description">

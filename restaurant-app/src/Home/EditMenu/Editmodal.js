@@ -2,10 +2,11 @@ import React, { Component, useContext } from "react";
 import { useParams } from "react-router-dom";
 import menuContext from "../../context/menuItem/menuItemContext";
 import Modal from "./Emodal";
+import {MdModeEdit} from 'react-icons/md'
 class Editmodal extends Component {
   
-  constructor(props, context) {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       show: false
     };
@@ -15,13 +16,15 @@ class Editmodal extends Component {
     
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
-  //  this.id=useParams();
+   
     
   }
 
   
-  showModal = (id) => {
+  showModal = ({id}) => {
+    
     this.setState({ show: true });
+
     // this.getMenIn(id);
   };
 
@@ -34,15 +37,17 @@ class Editmodal extends Component {
 
  
   render() {
+   
     return (
       <main>
         
         <Modal show={this.state.show} id={this.id} handleClose={this.hideModal}>
           
         </Modal>
-        <button  cursor="pointer" type="button" onClick={this.showModal}>
-          Open
-        </button>
+        <span  >
+         <MdModeEdit color="white" size={27}cursor="pointer" type="button" onClick={this.showModal} />
+       
+        </span>
       </main>
     );
   }

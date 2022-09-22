@@ -1,0 +1,18 @@
+.btn-container button{
+    background-color: #f32c2c;
+    width: 5rem;
+    height: auto;
+    border: none;
+    justify-content: space-between;
+    margin-right: 1%;
+    border-radius: 2em;
+    height: 3vh;
+}
+
+.btn-container button:hover{
+color: aliceblue;
+}
+
+button:active{
+    color: aliceblue;
+}
