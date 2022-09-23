@@ -3,6 +3,7 @@ import Modal from './Emodal';
 import { MdModeEdit } from 'react-icons/md'
 import menuContext from '../../context/menuItem/menuItemContext';
 import { useParams } from 'react-router-dom';
+import FocusTrap from 'focus-trap-react';
 
 const EditModal2 = ({id}) => {
 
@@ -31,17 +32,19 @@ const EditModal2 = ({id}) => {
         setShow(false);
     };
     return (
+        
         <div>
+           
             <main>
 
                 <Modal show={show} handleClose={hideModal} id={id}>
 
                 </Modal>
               
-                    <MdModeEdit color="red" size={27} cursor="pointer" type="button" onClick={showModal} />
-
+                    <MdModeEdit color="blue" size={27} cursor="pointer" type="button" onClick={showModal} />
+          
             </main>
-
+            
         </div>
     )
 }

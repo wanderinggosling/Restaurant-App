@@ -61,7 +61,7 @@ const menu = (props) => {
   // const [menuItems,setMenuItems] = useState(menus)
 
 
-  const [categories, setCategories] = useState(allCategories)
+  // const [categories, setCategories] = useState(allCategories)
   const[heading,setheading]=useState("ALL");
 
  
@@ -91,11 +91,11 @@ const menu = (props) => {
         )}
         
 {/* 
-        <Categories categories={categories} filterItems={filterItems} />
+         <Categories categories={categories} filterItems={filterItems} />
         
  
-        <FilterCategory items={menuItems} cat ={heading}></FilterCategory> */}
-        {/* <div> {menuItems.length===0 && <NoodleCategory/> }</div> */}
+        <FilterCategory items={menuItems} cat ={heading}></FilterCategory> 
+       <div> {menuItems.length===0 && <NoodleCategory/> }</div>  */}
         <div>
         
           <NoodleCategory></NoodleCategory>

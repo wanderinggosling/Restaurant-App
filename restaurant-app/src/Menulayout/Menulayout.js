@@ -2,16 +2,22 @@ import React ,{useContext, useState,useEffect}from 'react'
 import menuContext from '../context/menuItem/menuItemContext';
 import CartLayout from '../Home/CartLayout/CartLayout';
 import Categories from '../Home/Category/Categories';
+import FilterCategory from '../Home/Category/FilterCategory';
+import NoodleCategory from '../Home/Category/NoodleCategory';
+import Defaultmenulayout from './Defaultmenulayout';
+
 import './Menulayout.css'
 
-const menus=[{"category":"noodles"}];
-const allCategories = ['all',...new Set(menus.map(item => item.category))];
+
+
 const Menulayout = () => {
-    const [categories, setCategories] = useState(allCategories)
-    const [menuItems,setMenuItems]=useState(menus);
+    // const [categories, setCategories] = useState(allCategories)
+    
     // const [showcart,setshowcart]=useState(false);
     const context = useContext(menuContext);
-    const {showcart,setshowcart,menus,getMenus,getMenIn,menIn}=context;
+    const {showcart,setshowcart,menus,getMenus,getMenIn,menIn,menuItems,setMenuItems,allCategories}=context;
+   
+    // const allCategories = ['all',...new Set(menuItems.map(item => item.category))];
     const onClick=(id)=>{
         //  getMenIn(id);
         // alert(id);
@@ -23,17 +29,19 @@ const Menulayout = () => {
         getMenus();
     },[])
 
+    
+  const [categories, setCategories] = useState(allCategories)
 
  
-    const filterItems = (category) => {
+    const filterItems = async(category) => {
     
         if (category === 'all') {
-          setMenuItems(menus)
+          await setMenuItems(menus)
         //   setheading("All");
           return
         }
-        const newItems = menus.filter((item) => item.category === category)
-        setMenuItems(newItems)
+        const newItems =await menus.filter((item) => item.category === category)
+        await setMenuItems(newItems)
         // setheading(category);
         console.log(category);
       }
@@ -43,17 +51,20 @@ const Menulayout = () => {
     return (
         <div>  
             <div className="side-category">
-            <Categories categories={categories} filterItems={filterItems} />
+            <Categories categories={categories} filterItems={filterItems} /> 
+        {/* <FilterCategory items={menuItems} cat ={"abc"}></FilterCategory>  */}
+    <div> {menuItems.length===0 && <Defaultmenulayout/> }</div> 
+  
             </div>
 
             <div className="menus">
           
-            {menus.map(m => (<div key ={m._id}className="menulayout"  >
+            {menuItems.map(m => (<div key ={m._id}className="menulayout" onClick={()=>{onClick(m._id)}} >
             {showcart && <CartLayout id={ menIn._id}/>}
                 <div className="menulayout-card-column" >
                     <div className="menulayout-card-heading">
                         <h1></h1></div>
-                    <div className="menulayout-cards">
+                    <div className="menulayout-cards" onClick={()=>{onClick(m._id)}}>
                         <h1>{m.name}</h1>
                         <div className="menulayout-item-image" onClick={()=>{getMenIn(m._id)}}>
                             <img src={require('../images/cnoodles.jpg')} alt="" />

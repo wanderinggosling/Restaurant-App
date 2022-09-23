@@ -1,10 +1,15 @@
-import React from 'react';
+import React ,{useContext} from 'react';
 import './HomeLayout.css';
 import { NavLink } from 'react-router-dom';
+import menuContext from '../../context/menuItem/menuItemContext';
 // import OfferLayout from '../OfferLayout/OfferLayout';
 // import Card from '../CardProfile/CardProfile'
 
+
 const HomeLayout = () => {
+  const context = useContext(menuContext);
+  const { menus, setMenus, getMenus, deleteMenu, menuNoodles, menuSoup, setMenuNoodles, setMenuSoup, getMenuNoodles, getMenuSoup ,menuItems,setMenuItems,allCategories} = context
+  
   return (
     <div>
       <div className="homelayout">

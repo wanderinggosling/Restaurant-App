@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState,useEffect } from 'react'
 import { NavLink } from 'react-router-dom';
 import './home.css'
 import Content from './content';
@@ -34,6 +34,9 @@ const home = () => {
   const [categories, setCategories] = useState(allCategories)
   const[heading,setheading]=useState("ALL");
 
+  useEffect(()=>{
+    getMenus();
+},[])
  
   const filterItems = (category) => {
     

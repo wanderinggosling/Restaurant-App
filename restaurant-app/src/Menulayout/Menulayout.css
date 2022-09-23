@@ -74,7 +74,7 @@
 .menulayout-item-addtocart button{
     background-color: #3eb042; /* Green */
     border: solid 1px red;
-  
+  border-radius:2em;
     width: 100%;
     color: rgb(177, 35, 35);
     padding: 15px 32px;
@@ -108,7 +108,7 @@
 
 .menulayout-cards h1{
     display: flex;
-    color: rgb(195, 50, 50);
+    color: rgb(255 245 0);
     font-family:'Times New Roman', Times, serif;
     /* margin-left: 20%; */
     /* font-size: 20px; */

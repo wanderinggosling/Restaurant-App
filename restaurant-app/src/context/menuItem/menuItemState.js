@@ -56,18 +56,23 @@ const menuItemState = (props) => {
   }
 
   const getMenIn = async (id) => {
-    setmenIn({ id: id, name: '', price: '', category: '', description: '' })
-    const response = await fetch(`${host}/api/menu/getIndividual/${id}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      }
+    try {
+      setmenIn({ id: id, name: '', price: '', category: '', description: '' })
+      const response = await fetch(`${host}/api/menu/getIndividual/${id}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+  
+      });
+      const individual = await response.json()
+      setmenIn(individual);
+      // console.log("You clicked on: ")
+      // console.log(menIn);
+    } catch (error) {
+      console.log(error);
+    }
 
-    });
-    const individual = await response.json()
-    setmenIn(individual);
-    // console.log("You clicked on: ")
-    // console.log(menIn);
   }
 
   //add menuItems
@@ -197,7 +202,7 @@ const menuItemState = (props) => {
 
   const [menuItems, setMenuItems] = useState(menus)
 
-  const allCategories = ['all', ...new Set(menus.map(item => item.category))];
+  const allCategories = ['all',...new Set(menus.map(item => item.category))];
   const [categories, setCategories] = useState(allCategories)
 
   let cat = "All";
